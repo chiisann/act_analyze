@@ -1,2 +1,23 @@
-# act_analyze
-Create structure analyzing Twitter information.
+act_analyze
+==================
+Create structure analyzing Twitter information. :sparkle:
+
+## Description
+You can check your each Tweet's
+- *id*
+- *created time*
+- *text*
+- *the number of favorite*
+- *the number of retweet*
+
+And you can see the table in the specified file with *.csv*.
+
+## Usage
+If you write down your own Twitter API key on the 'x' below and run the program, you can get new .csv file in the 'user' folder.
+```python
+#Twitter API key
+consumer_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
+consumer_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+access_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+access_token_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+```
