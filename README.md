@@ -21,3 +21,10 @@ consumer_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 access_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 access_token_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ```
+
+## Note
+You can see the example that is my Tweet's analyzed data with table and graph in **tweets_2020042901 成功1.csv** file opend by Excel.
+
+## Reference Material
+- https://note.com/got1229/n/nedea8af73cea
+- https://qiita.com/i_am_miko/items/a2e5168e619ed37afeb9
