@@ -28,3 +28,6 @@ You can see the example that is my Tweet's analyzed data with table and graph in
 ## Reference Material
 - https://note.com/got1229/n/nedea8af73cea
 - https://qiita.com/i_am_miko/items/a2e5168e619ed37afeb9
+
+## NOOOOO
+ちなみに4月のツイートを誤って全消ししてしまいました
