@@ -1,31 +1,31 @@
 import tweepy
 import csv
 
-#Twitter API key iTwitter API\¿‚ÉŠ“¾‚Å‚«‚éŒÂl“I‚ÈƒL[Ax‚ÉƒL[‚ğ‚¢‚ê‚éj
+#Twitter API key ï¼ˆTwitter APIç”³è«‹æ™‚ã«æ‰€å¾—ã§ãã‚‹å€‹äººçš„ãªã‚­ãƒ¼ã€xã«ã‚­ãƒ¼ã‚’ã„ã‚Œã‚‹ï¼‰
 consumer_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 consumer_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 access_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 access_token_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
-#API”FØ
+#APIèªè¨¼
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
 
-#ƒcƒC[ƒgæ“¾
+#ãƒ„ã‚¤ãƒ¼ãƒˆå–å¾—
 
-#list‚ğì‚é
+#listã‚’ä½œã‚‹
 tweet_data = []
 
-#items(n) n‚ªŠ“¾ƒcƒC[ƒg”
-for tweet in tweepy.Cursor(api.user_timeline,screen_name = "chiisann_",exclude_replies = True).items(100): #screen_name‚É@‚ğœ‚¢‚½TwitterƒAƒJƒEƒ“ƒg–¼
+#items(n) nãŒæ‰€å¾—ãƒ„ã‚¤ãƒ¼ãƒˆæ•°
+for tweet in tweepy.Cursor(api.user_timeline,screen_name = "chiisann_",exclude_replies = True).items(100): #screen_nameã«@ã‚’é™¤ã„ãŸTwitterã‚¢ã‚«ã‚¦ãƒ³ãƒˆå
 	if not "RT" in tweet.text:
     	tweet_data.append([tweet.id,tweet.created_at,tweet.text.replace('\n',''),tweet.favorite_count,tweet.retweet_count])
 
-#csvo—Í
-with open('tweets_2020042901.csv', 'w',newline='',encoding='utf-8') as f: #open()‚Åƒtƒ@ƒCƒ‹–¼‚Ìw’è
+#csvå‡ºåŠ›
+with open('result.csv', 'w',newline='',encoding='utf-8') as f: #open()ã§ãƒ•ã‚¡ã‚¤ãƒ«åã®æŒ‡å®š
     writer = csv.writer(f, lineterminator='\n')
-    writer.writerow(["id","created_at","text","fav","RT"])#5—ñ‚Â‚­‚é
+    writer.writerow(["id","created_at","text","fav","RT"])#5åˆ—ã¤ãã‚‹
     writer.writerows(tweet_data)
